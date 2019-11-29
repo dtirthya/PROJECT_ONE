@@ -1,6 +1,6 @@
 from flask import render_template
 from website.forms import RegistrationForm, LoginForm
-from website import app, db
+from website import app
 #from website.models import
 
 @app.route("/")
@@ -13,6 +13,6 @@ def register():
     return render_template("register.html", form=form)
 
 @app.route("/login")
-def register():
+def login():
     form = LoginForm()
     return render_template("login.html", form=form)
