@@ -1,7 +1,7 @@
 from flask import render_template
 from website.forms import RegistrationForm, LoginForm
 from website import app
-#from website.models import
+from website.models import Users, Attendance
 
 @app.route("/")
 def home():

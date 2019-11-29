@@ -10,7 +10,7 @@ class Users(db.Model):
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
     image_folder = db.Column(db.String, unique=True, nullable=False)
 
-class Authentication(db.Model):
+class Attendance(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date_time_details = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
     u_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
